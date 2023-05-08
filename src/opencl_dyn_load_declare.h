@@ -233,8 +233,8 @@ DECLARE_FUNC_OPENCL(clEnqueueReleaseGLObjects)
 //DECLARE_FUNC_OPENCL(clCreateFromGLTexture2D)
 //DECLARE_FUNC_OPENCL(clCreateFromGLTexture3D)
 
-DECLARE_FUNC_OPENCL(clGetGLContextInfoKHR)
-DECLARE_FUNC_OPENCL(clCreateEventFromGLsyncKHR)
+//DECLARE_FUNC_OPENCL(clGetGLContextInfoKHR)
+//DECLARE_FUNC_OPENCL(clCreateEventFromGLsyncKHR)
 
 /********************************************************************************************************/
 
@@ -364,6 +364,6 @@ DECLARE_FUNC_OPENCL(clCreateEventFromGLsyncKHR)
 #define clEnqueueReleaseGLObjects                    pclEnqueueReleaseGLObjects
 //#define clCreateFromGLTexture2D                    pclCreateFromGLTexture2D
 //#define clCreateFromGLTexture3D                    pclCreateFromGLTexture3D 
-#define clGetGLContextInfoKHR                        pclGetGLContextInfoKHR
-#define clCreateEventFromGLsyncKHR                   pclCreateEventFromGLsyncKHR
+//#define clGetGLContextInfoKHR                      pclGetGLContextInfoKHR
+//#define clCreateEventFromGLsyncKHR                 pclCreateEventFromGLsyncKHR
 #endif
