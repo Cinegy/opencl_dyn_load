@@ -28,6 +28,9 @@ typedef void* HMODULE;
 //#define OPENCL_FILENAME "OpenCL.so"
 // "/etc/OpenCL/vendors/*.icd"
 static const std::vector<std::string> opencl_paths = {
+#if defined(__APPLE__)
+	"/System/Library/Frameworks/OpenCL.framework/OpenCL" // Default
+#else
 	"libOpenCL.so", // Default
 	"/usr/lib/x86_64-linux-gnu/libOpenCL.so", // Linux amd64
 	"/usr/lib/aarch64-linux-gnu/libOpenCL.so", // Linux aarch64
@@ -39,6 +42,7 @@ static const std::vector<std::string> opencl_paths = {
 	"/system/lib/egl/libGLES_mali.so",
 	// PowerVR
 	"/system/vendor/lib/libPVROCL.so"
+#endif
 };
 #endif
 static std::string str_opencl_path = "";
